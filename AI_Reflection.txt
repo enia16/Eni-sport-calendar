@@ -1,0 +1,140 @@
+﻿AI Reflection
+
+
+
+
+AI REFLECTION DOCUMENT
+Sports Event Calendar Project
+
+
+OVERVIEW
+I built this calendar app mostly myself using vanilla JavaScript. 
+I used AI only for help with calendar date calculations 
+and a few CSS layout suggestions.
+
+
+
+
+WHAT I DID MYSELF 
+
+
+- Entire project structure and planning
+- All navigation and view switching logic
+- Form validation and event adding functionality  
+- Event detail display
+- All button click handlers and interactions
+- Mobile responsive design decisions
+- Color scheme and UI design (purple gradient)
+- All testing and debugging
+- Chose to use vanilla JS instead of frameworks
+
+
+Basically: The app logic, user interactions, and design are all mine.
+
+
+
+
+WHERE I USED AI 
+
+
+
+
+1. CALENDAR GRID MATH
+   Problem: Calculating which day of the week a month starts
+   
+   AI Helped: Showed me firstDay.getDay() method and empty cell logic
+   
+   What I Did: 
+   - Tested it with different months to understand how it works
+   - Modified it to add my own styling and today highlighting
+   - Now I understand: get day 0-6, add that many empty cells, 
+     then loop through the days
+   
+   I can explain and rewrite this myself now.
+
+
+2. DATE FORMATTING
+   Problem: Converting dates to YYYY-MM-DD format
+   
+   AI Helped: Showed me padStart() for zero-padding
+   
+   What I Did:
+   - Learned that months are 0-indexed (need +1)
+   - Used this knowledge in other parts of my code
+   - Wrote all the date comparison logic myself
+
+
+3. CSS GRID STRUCTURE  
+   Problem: Best way to make 7-column calendar layout
+   
+   AI Helped: Suggested grid-template-columns: repeat(7, 1fr)
+   
+   What I Did:
+   - Adjusted all spacing, colors, and sizing myself
+   - Added hover effects and animations myself
+   - Chose breakpoints based on my own testing
+
+
+
+
+TECHNICAL DECISIONS
+
+
+WHY VANILLA JAVASCRIPT?
+- No build tools needed
+- Demonstrates core JS understanding  
+- Fast and simple for this scope
+
+
+WHY SEPARATE FILES?
+- Cleaner organization
+- Real-world best practice
+
+
+WHY CSS GRID?
+- Perfect for calendar's 7-column layout
+- Built-in responsive features
+
+
+ONE IMPROVEMENT WITH MORE TIME
+
+
+ EDIT/DELETE EVENTS
+What I'd Add:
+1. Edit button on event details
+2. Delete button with confirmation  
+
+
+Why: Makes app actually useful (data persists)
+
+
+Time Needed: 2-3 hours
+
+
+Code I'd Add:
+```javascript
+
+
+function loadEvents() {
+    const saved = localStorage.getItem('events');
+    return saved ? JSON.parse(saved) : sampleEvents;
+}
+```
+
+
+Simple to implement - just wasn't in requirements.
+
+
+
+
+WHAT I LEARNED
+
+
+- Calendar algorithms and date math
+- CSS Grid for complex layouts
+- State management patterns
+- How to work effectively with AI as a tool
+
+
+AI helped me learn faster on tricky parts, but I wrote and 
+understand all the code.
