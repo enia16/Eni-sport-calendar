@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Calendar</title>
+    <link rel="stylesheet" href="src/styles/calendar.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand" onclick="window.location.href='index.html'">Sports Calendar</div>
+      <div class="nav-links">
+        <button class="nav-button" onclick="window.location.href='index.html'">Home</button>
+        <button class="nav-button active" onclick="window.location.href='calendar.html'">Calendar</button>
+        <button class="nav-button" onclick="window.location.href='add-event.html'">Add Event</button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div id="calendarView" class="view-section active">
+        <div class="calendar-header">
+          <button id="prevMonth" class="nav-arrow">←</button>
+          <h2 id="monthYear">Loading...</h2>
+          <button id="nextMonth" class="nav-arrow">→</button>
+        </div>
+        <div class="filter-container">
+          <label for="sportFilter">Filter by Sport:</label>
+          <select id="sportFilter">
+            <option value="">All Sports</option>
+          </select>
+        </div>
+        <div class="weekday-header">
+          <div class="weekday">Sun</div>
+          <div class="weekday">Mon</div>
+          <div class="weekday">Tue</div>
+          <div class="weekday">Wed</div>
+          <div class="weekday">Thu</div>
+          <div class="weekday">Fri</div>
+          <div class="weekday">Sat</div>
+        </div>
+        <div id="calendarGrid" class="calendar-grid"></div>
+      </div>
+    </div>
+
+    <script src="src/js/calendar.js"></script>
+  </body>
+</html>
